@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #161719;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        buttona {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        buttona:hover {
+            background-color: #45a049;
+        }
+
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Binary Test</h2>
+        <p>นำข้อความที่อยู่ในรูปแบบ Binary ต่อไปนี้ไปแปลงเป็นตัวอักษร
+        <div class="link">
+            <a href="https://www.rapidtables.com/convert/number/binary-to-ascii.html">
+                <h4>ตัวช่วย = **Rapidtables**</h4>
+            </a>
+        </div>
+        </p>
+        <h3>Binary = 01001011 01001101 01010101 01010100 01001110 01000010</h3>
+        <input type="text" id="answer" placeholder="คำตอบ">
+        <button onclick="checkAnswer()">ส่งคำตอบ</button>
+        <p id="error"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "KMUTNB";
+            const nearcorrectAnswer = "kmutnb"; // Replace with your actual answer
+            const enteredAnswer = document.getElementById("answer").value;
+            console.log(enteredAnswer)
+            if(enteredAnswer == nearcorrectAnswer) {
+                document.getElementById("error").innerText = "อย่าลืมเขียนเป็นตัวใหญ่ด้วยคร้าบบบ!!.";
+            }
+            else if (enteredAnswer === correctAnswer) {
+                window.location.href = "https://mac-freshy.vercel.app/";
+            } else {
+                document.getElementById("error").innerText = "ยังไม่ถูกนะค้าบบ.";
+            }
+        }
+    </script>
+</body>
+
+</html>
